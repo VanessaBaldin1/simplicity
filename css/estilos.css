@@ -62,12 +62,29 @@ a {
 }
 
 .topo {
-    height: 12vh;
+    /* Para fixar o menu na pagina */
+    position: sticky;
+    top: 0;
+    background-color: var(--cor-clara);
+
+
+    /* Classe  .limitador especifica para uso no cabeçalho/topo: além das configurações  gerais (width e margin), AQUI ela também tem altura e ajustes do flex. */
+    .limitador { 
     /* Provisório usa 12vh ou usa 150px para testes*/
+    height: 12vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
 
+}
+
+/* Classe  .limitador de uso geral:
+sempre terá largura de 95vw e margin auto não importando onde será aplicada. */
+
+.limitador {
+    width: 95vw;
+    margin: auto;
 }
 
 .titulo-menu a {
@@ -235,5 +252,36 @@ article {
      text-align: center;
 }
 
+.historia {
+    background-image: url(../imagens/fundo-madeira.jpg);
+    background-size: cover;
+    background-attachment: fixed;
 
+    h2 { color:var(--cor-clara);
+        text-shadow: 4px 4px 4px red;
+    }
+
+    iframe {
+        width: 100%;
+        max-width: 700px;
+        margin-bottom: 2rem;
+    }
+}
+
+.localizacao iframe {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+
+.rodape {
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    height: 30vh;
+    font-style: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
