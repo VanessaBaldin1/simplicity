@@ -145,6 +145,11 @@ a {
         color: var(--cor-clara);
         text-align: center;
 
+        /* Aplicar a animação */
+
+        animation-name: animaDestaque;
+        animation-duration: .5s;
+
     }
 
     /* h2 { font-size: 3rem;}
@@ -162,11 +167,73 @@ a {
 
     /* 10vw é para lateral da viewport
     primeiro valor minimo - tamanho da visualização e maximo*/
-    h2 { font-size: clamp(3rem, 10vw, 7rem);
+    h2 {
+        font-size: clamp(3rem, 10vw, 7rem);
 
     }
 
-    p {font-size: clamp (1.5rem, 3vw, 3rem);
+    p {
+        font-size: clamp (1.5rem, 3vw, 3rem);
+        animation-delay: .5s;
+
+        /* Backwards significa antes da animação: o elemento assume o estilo do primeiro keyframe (ou seja, o from). Portanto assim, forçamos a iniciar com opacity zero e escala menor. */
+        animation-fill-mode: backwards;
 
     }
 }
+
+/* 1) Criar animação */
+@keyframes animaDestaque {
+
+    from {
+        opacity: 0;
+        transform: scale(0.3);
+
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+/* Até aqui foram estilizações somente do quadro que tem o texto HTML e CSS */
+
+
+
+/*  Agora será feito a estilização do bloco dos artigos */
+
+/* vamos devolver o espaçamento que zeramos no reset 
+vai mexer em todos os h2 restantes da pagina*/
+
+
+/* vamos devolver todos os espaçamentos que foram zerados no reset lá inicio */
+article {
+
+    h2 {
+        padding: 1rem;
+        font-size: 1.4rem;
+        font-family: Raleway, sans-serif;
+        color: var(--cor-titulo)
+    }
+
+    p {
+        padding: .5rem 0;
+        font-size: 1.2rem;
+    }
+
+
+    address {
+        font-style: normal;
+        font-size: 1.2rem;
+    }
+}
+
+
+.front-end, .historia, .localizacao {
+     text-align: center;
+}
+
+
+
