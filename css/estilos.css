@@ -147,6 +147,26 @@ a {
 
     }
 
-    h2 { font-size: 3rem;}
-    p { font-size: 1.3rem;}
+    /* h2 { font-size: 3rem;}
+    p { font-size: 1.3rem;} */
+
+    /* Usando a função clamp() ATENÇÃO PODE USAR NO LUGAR DAS MEDIAS
+     Função útil para redimensionamento responsivo de acordo com critérios de tamanhos mínimo, ideal/variável/responsivo e máximo. Uso mais comum é para textos responsivos, mas pode ser usada com qualquer propriedade que envolva tamanhos (width, height etc).
+     
+    clamp ()
+        tamanho mínimo;
+        tamanho ideal/variável/responsivo;
+        tamanho máximo;
+
+    */
+
+    /* 10vw é para lateral da viewport
+    primeiro valor minimo - tamanho da visualização e maximo*/
+    h2 { font-size: clamp(3rem, 10vw, 7rem);
+
+    }
+
+    p {font-size: clamp (1.5rem, 3vw, 3rem);
+
+    }
 }
