@@ -285,3 +285,55 @@ article {
     text-align: center;
 }
 
+
+
+/* Regras para as páginas internas
+(Produtos, Serviços e Contato) */
+
+.conteudo-interno {
+
+    background-color: var(--cor-intermediaria);
+    padding: .5rem;
+    border-radius: 8px;
+
+    h2 {padding-left: 0;}
+}
+
+table {
+    border: solid 4px var(--cor-escura);
+    width: 80%;
+    margin: auto;
+    max-width: 600px;
+
+
+    /* Removendo o espaçamento entre as bordas das células */
+    border-collapse: collapse;
+}
+
+caption {
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: .3rem;
+}
+
+th,
+td {
+    border: solid 1px var(--cor-escura);
+    padding: .5rem;
+}
+
+th {
+    background-color: var(--cor-escura);
+    color:var(--cor-clara);
+    font-size: 14px;
+}
+
+td:nth-child(2) { text-align: center; }
+
+td:last-child, th:last-child {
+    text-align: right;
+}
+
+tr:nth-child(even) {
+    background-color: var(--cor-clara);
+}
