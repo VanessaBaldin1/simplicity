@@ -67,6 +67,9 @@ a {
     top: 0;
     background-color: var(--cor-clara);
 
+    /* Para colocar as fotos para tras do header */
+    z-index: 10;
+
 
     /* Classe  .limitador especifica para uso no cabeçalho/topo: além das configurações  gerais (width e margin), AQUI ela também tem altura e ajustes do flex. */
     .limitador { 
@@ -337,3 +340,24 @@ td:last-child, th:last-child {
 tr:nth-child(even) {
     background-color: var(--cor-clara);
 }
+
+/* Galeria de fotos */
+
+.galeria  {
+    text-align: center;
+
+    img {
+    
+    border-radius: 50%;
+    transform: scale(0.8) rotate(-10deg);
+    box-shadow: var(--cor-escura) 0 0 30px;
+
+    &:hover{
+        transform:scale(1) rotate(0);
+        transition:  transform 0.5s ease-in-out;
+    }
+   
+}
+}
+
+
