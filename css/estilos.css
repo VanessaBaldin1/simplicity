@@ -72,13 +72,13 @@ a {
 
 
     /* Classe  .limitador especifica para uso no cabeçalho/topo: além das configurações  gerais (width e margin), AQUI ela também tem altura e ajustes do flex. */
-    .limitador { 
-    /* Provisório usa 12vh ou usa 150px para testes*/
-    height: 12vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    .limitador {
+        /* Provisório usa 12vh ou usa 150px para testes*/
+        height: 12vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
 }
 
@@ -251,8 +251,10 @@ article {
 }
 
 
-.front-end, .historia, .localizacao {
-     text-align: center;
+.front-end,
+.historia,
+.localizacao {
+    text-align: center;
 }
 
 .historia {
@@ -260,7 +262,8 @@ article {
     background-size: cover;
     background-attachment: fixed;
 
-    h2 { color:var(--cor-clara);
+    h2 {
+        color: var(--cor-clara);
         text-shadow: 4px 4px 4px red;
     }
 
@@ -299,7 +302,9 @@ article {
     padding: .5rem;
     border-radius: 8px;
 
-    h2 {padding-left: 0;}
+    h2 {
+        padding-left: 0;
+    }
 }
 
 table {
@@ -327,13 +332,16 @@ td {
 
 th {
     background-color: var(--cor-escura);
-    color:var(--cor-clara);
+    color: var(--cor-clara);
     font-size: 14px;
 }
 
-td:nth-child(2) { text-align: center; }
+td:nth-child(2) {
+    text-align: center;
+}
 
-td:last-child, th:last-child {
+td:last-child,
+th:last-child {
     text-align: right;
 }
 
@@ -343,21 +351,58 @@ tr:nth-child(even) {
 
 /* Galeria de fotos */
 
-.galeria  {
+.galeria {
     text-align: center;
 
     img {
-    
-    border-radius: 50%;
-    transform: scale(0.8) rotate(-10deg);
-    box-shadow: var(--cor-escura) 0 0 30px;
 
-    &:hover{
-        transform:scale(1) rotate(0);
-        transition:  transform 0.5s ease-in-out;
+        border-radius: 50%;
+        transform: scale(0.8) rotate(-10deg);
+        box-shadow: var(--cor-escura) 0 0 30px;
+
+        &:hover {
+            transform: scale(1) rotate(0);
+            transition: transform 0.5s ease-in-out;
+        }
+
     }
-   
-}
 }
 
+/*  Media Queries: regras de uso condicional de acordo com o tamanho de tela necessário para ajustes no site. */
 
+@media screen and (min-width:600px) {
+
+    /* Para esconder a palavra menu, quando a tela ultrapassar 600px */
+    .titulo-menu {
+        display: none;
+    }
+
+    /* Faz o conteúdo do menu aparecer e ocupar um tamanho bom */
+    .links-menu {
+        display: flex;
+
+
+        /* Forçamos cada item da lista a ter largura totale, com isso, redistribuir os espaços/alinhamentos. */
+        li {
+            width: 100%;
+        }
+
+    }
+
+    /* Ajustamos o tamanho do menu (nav) como um todo. */
+    .menu {
+        width: 60%;
+    }
+
+}
+
+@media screen and (min-width:1000px) {
+    html {
+        font-size: 18px;
+    }
+
+    .limitador {
+        max-width: 1000px;
+    }
+
+}
