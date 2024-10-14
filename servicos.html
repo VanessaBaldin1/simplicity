@@ -17,6 +17,11 @@
         href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
+        <!-- Importação do CSS do plugin Lightbox (para usar a galeria de fotos) -->
+    <link rel="stylesheet" href="/lightbox/css/lightbox.min.css">
+
+
+
     <!-- Link de ligação do CSS -->
     <link rel="stylesheet" href="css/estilos.css">
 </head>
@@ -61,13 +66,13 @@
             </p>
 
            <figure class="galeria">
-             <a href="./imagens/consultoria-treinamento.jpg"><img src="./imagens/consultoria-treinamento-mini.jpg" alt="Consultoria-treinamento"></a>
+             <a data-lightbox="foto" data-title="Equipe" href="./imagens/consultoria-treinamento.jpg"><img src="./imagens/consultoria-treinamento-mini.jpg" alt="Consultoria-treinamento"></a>
 
-             <a href="./imagens/desenvolvimento-web.jpg"><img src="./imagens/desenvolvimento-web-mini.jpg" alt="desenvolvimento-web"></a>
+             <a data-lightbox="foto" data-title="diagrama de web"  href="./imagens/desenvolvimento-web.jpg"><img src="./imagens/desenvolvimento-web-mini.jpg" alt="desenvolvimento-web"></a>
 
-             <a href="./imagens/design-grafico.jpg"><img src="./imagens/design-grafico-mini.jpg" alt="design-grafico"></a>
+             <a data-lightbox="foto" data-title="Tela de Photoshop" href="./imagens/design-grafico.jpg"><img src="./imagens/design-grafico-mini.jpg" alt="design-grafico"></a>
 
-             <a href="./imagens/marketing-digital.jpg"><img src="./imagens/marketing-digital-mini.jpg" alt="marketing-digital"></a>
+             <a data-lightbox="foto" data-title="Detalhes do trabalho" href="./imagens/marketing-digital.jpg"><img src="./imagens/marketing-digital-mini.jpg" alt="marketing-digital"></a>
             </figure>
             <p>
                 Oferecemos serviços de consultoria para ajudar sua empresa a crescer. Analisamos suas necessidades e
@@ -94,6 +99,20 @@
     <footer class="rodape">
         <p>Simplicity é um site ficitício desenvolvido para fins educacionais &copy; <time>2024</time></p>
     </footer>
+
+    <!-- Importação da biblioteca Jquery (sempre primeiro) -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+
+    <!-- Importação do JS do plugim do Lightbox -->
+    <script src="lightbox/js/lightbox.min.js"></script>
+
+    <script>
+        lightbox.option({
+          'resizeDuration': 200,
+          'wrapAround': true,
+          albumLabel:"Foto %1 de %2"
+        })
+    </script>
 
     <script src="js/menu.js"></script>
     
